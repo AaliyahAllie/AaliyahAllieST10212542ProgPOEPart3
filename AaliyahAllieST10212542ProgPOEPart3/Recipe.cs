@@ -8,7 +8,7 @@ using static System.Formats.Asn1.AsnWriter;
 using AaliyahAllieST10212542ProgPOEPart3;
 
 //Namespace defined
-namespace AaliyahAllie_ST10212542_PROG6221_PART2_POE
+namespace AaliyahAllieST10212542ProgPOEPart3
 {
     //declaring class as Recipe
     public class Recipe
