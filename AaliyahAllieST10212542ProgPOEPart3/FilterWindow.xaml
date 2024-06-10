@@ -1,0 +1,43 @@
+﻿<Window x:Class="AaliyahAllieST10212542ProgPOEPart3.FilterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AaliyahAllieST10212542ProgPOEPart3"
+        mc:Ignorable="d"
+        Title="FilterWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="20">
+            <TextBlock Text="Filter the list of recipes by:" FontSize="16" Margin="0 0 0 10"/>
+
+            <!-- Label for ingredient filter -->
+            <StackPanel>
+                <Label Content="Ingredient Name:" FontWeight="Bold"/>
+                <TextBox x:Name="txtIngredientFilter" />
+            </StackPanel>
+
+            <!-- Label for food group filter -->
+            <StackPanel Margin="0 10">
+                <Label Content="Food Group:" FontWeight="Bold"/>
+                <ComboBox x:Name="cmbFoodGroupFilter" >
+                    <!-- Data binding to food groups -->
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Value}" Tag="{Binding Key}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+
+            <!-- Label for max calories -->
+            <StackPanel Margin="0 10">
+                <Label Content="Maximum Calories:" FontWeight="Bold"/>
+                <TextBox x:Name="txtMaxCalories" />
+            </StackPanel>
+
+            <!-- Buttons -->
+            <Button Content="Apply Filters" HorizontalAlignment="Center" Margin="0 10" Click="ApplyFilters_Click"/>
+            <Button Content="Display All Recipes" HorizontalAlignment="Center" Margin="0 10" Click="Display_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

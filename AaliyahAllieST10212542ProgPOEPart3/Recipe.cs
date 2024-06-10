@@ -202,6 +202,12 @@ namespace AaliyahAllieST10212542ProgPOEPart3
                 ingredient.Calories = ingredient.OriginalCalories;
             }
         }
+        public static Dictionary<int, string> GetAvailableFoodGroups()
+        {
+            return AvailableFoodGroups;
+        }
+
+
 
         public class Ingredient
         {// Represents an ingredient with properties for its name, quantity, original quantity, unit of measurement,

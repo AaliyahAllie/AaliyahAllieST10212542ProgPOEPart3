@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.Windows;
 using AaliyahAllieST10212542ProgPOEPart3;
 
 namespace AaliyahAllieST10212542ProgPOEPart3
@@ -7,12 +8,14 @@ namespace AaliyahAllieST10212542ProgPOEPart3
     {
         // Use the same variable name for consistency
         public static List<Recipe> Recipes = new List<Recipe>();
+        private List<Recipe> listOfRecipes;
 
         public MainWindow()
         {
             InitializeComponent();
             // Use the same variable name for consistency
             Recipes = new List<Recipe>();
+            listOfRecipes = new List<Recipe>();
         }
 
         private void Exit_Button_Click(object sender, RoutedEventArgs e)
@@ -120,6 +123,16 @@ namespace AaliyahAllieST10212542ProgPOEPart3
                 }
             }
         }
+
+        private void Filter_Click(object sender, RoutedEventArgs e)
+        {
+            // Pass the list of recipes to the FilterWindow constructor
+            FilterWindow filterWindow = new FilterWindow(listOfRecipes);
+
+            // Show the filter window
+            filterWindow.Show();
+        }
+
 
 
     }
