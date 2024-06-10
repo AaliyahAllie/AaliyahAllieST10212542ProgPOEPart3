@@ -8,17 +8,20 @@ namespace AaliyahAllieST10212542ProgPOEPart3
     public partial class FilterWindow : Window
     {
         // List to store all recipes
-        private List<Recipe> allRecipes;
+        private List<Recipe> Recipes;
 
         public FilterWindow(List<Recipe> recipes)
         {
             InitializeComponent();
-            allRecipes = recipes;
+            Recipes = recipes;
             PopulateFoodGroupsComboBox();
         }
 
         private void PopulateFoodGroupsComboBox()
         {
+            // Add a default option
+            cmbFoodGroupFilter.Items.Add(new KeyValuePair<int, string>(0, "All Food Groups"));
+
             // Get available food groups from Recipe class
             var foodGroups = Recipe.GetAvailableFoodGroups();
 
@@ -27,12 +30,15 @@ namespace AaliyahAllieST10212542ProgPOEPart3
             {
                 cmbFoodGroupFilter.Items.Add(new KeyValuePair<int, string>(foodGroup.Key, foodGroup.Value));
             }
+
+            // Set the default selected item
+            cmbFoodGroupFilter.SelectedIndex = 0;
         }
 
         private void ApplyFilters_Click(object sender, RoutedEventArgs e)
         {
             // Check if there are recipes available
-            if (allRecipes == null || allRecipes.Count == 0)
+            if (Recipes == null || Recipes.Count == 0)
             {
                 MessageBox.Show("There are no recipes to search from.", "No Recipes", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
@@ -40,7 +46,6 @@ namespace AaliyahAllieST10212542ProgPOEPart3
 
             // Get filter values
             string ingredientFilter = txtIngredientFilter.Text.Trim();
-            int selectedFoodGroup = cmbFoodGroupFilter.SelectedIndex + 1; // Index is 0-based, so adding 1 to match food group number
             double maxCalories;
 
             // Check if max calories input is valid
@@ -51,35 +56,50 @@ namespace AaliyahAllieST10212542ProgPOEPart3
             }
 
             // Filter recipes based on the criteria
-            List<Recipe> filteredRecipes = allRecipes.Where(recipe =>
+            List<Recipe> filteredRecipes;
+
+            // Check if all food groups are selected
+            if (cmbFoodGroupFilter.SelectedIndex == 0)
             {
-                // Check if recipe contains the ingredient (if specified)
-                bool containsIngredient = string.IsNullOrWhiteSpace(ingredientFilter) || recipe.Ingredients.Any(ingredient => ingredient.Name.Contains(ingredientFilter, StringComparison.OrdinalIgnoreCase));
-
-                // Check if recipe belongs to the selected food group (if specified)
-                bool belongsToFoodGroup = selectedFoodGroup == 0 || recipe.Ingredients.Any(ingredient => ingredient.FoodGroupNumber == selectedFoodGroup);
-
-                // Check if recipe has calories within the specified range (if specified)
-                bool withinCaloriesRange = maxCalories <= 0 || recipe.CalculateTotalCalories() <= maxCalories;
-
-                return containsIngredient && belongsToFoodGroup && withinCaloriesRange;
-            }).ToList();
-
-            // Display filtered recipes
-            DisplayFilteredRecipes(filteredRecipes);
-        }
-
-
-        private void DisplayFilteredRecipes(List<Recipe> recipes)
-        {
-            // Clear previous items from the list box
-            listBoxRecipes.Items.Clear();
-
-            // Add filtered recipe names to the list box
-            foreach (var recipe in recipes)
+                // Display all recipe names
+                string allRecipeNames = string.Join(Environment.NewLine, Recipes.Select(recipe => recipe.RecipeName));
+                MessageBox.Show($"All Recipes:{Environment.NewLine}{allRecipeNames}", "All Recipes", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+            else
             {
-                listBoxRecipes.Items.Add(recipe.RecipeName);
+                // Get the selected food group
+                int selectedFoodGroup = ((KeyValuePair<int, string>)cmbFoodGroupFilter.SelectedItem).Key;
+
+                // Filter recipes based on selected food group and other criteria
+                filteredRecipes = Recipes.Where(recipe =>
+                {
+                    // Check if recipe contains the ingredient (if specified)
+                    bool containsIngredient = string.IsNullOrWhiteSpace(ingredientFilter) || recipe.Ingredients.Any(ingredient => ingredient.Name.Contains(ingredientFilter, StringComparison.OrdinalIgnoreCase));
+
+                    // Check if recipe belongs to the selected food group
+                    bool belongsToFoodGroup = recipe.Ingredients.Any(ingredient => ingredient.FoodGroupNumber == selectedFoodGroup);
+
+                    // Check if recipe has calories within the specified range (if specified)
+                    bool withinCaloriesRange = maxCalories <= 0 || (recipe.CalculateTotalCalories() <= maxCalories && recipe.CalculateTotalCalories() >= 0);
+
+                    return containsIngredient && belongsToFoodGroup && withinCaloriesRange;
+                }).ToList();
+
+            }
+
+            // Display the names of filtered recipes
+            if (filteredRecipes.Count > 0)
+            {
+                string recipeNames = string.Join(Environment.NewLine, filteredRecipes.Select(recipe => recipe.RecipeName));
+                MessageBox.Show($"Matching Recipes:{Environment.NewLine}{recipeNames}", "Filtered Recipes", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("No recipes match the entered filters.", "No Matches", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
+
+
     }
 }
