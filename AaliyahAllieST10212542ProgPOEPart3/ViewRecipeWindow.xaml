@@ -1,0 +1,29 @@
+﻿<!-- ViewRecipeWindow.xaml -->
+<Window x:Class="AaliyahAllieST10212542ProgPOEPart3.ViewRecipeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="View Recipe" SizeToContent="WidthAndHeight">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ComboBox x:Name="RecipeComboBox" Grid.Row="0" Margin="10" Width="200"
+                  SelectionChanged="RecipeComboBox_SelectionChanged"/>
+
+        <StackPanel Grid.Row="1" Margin="10">
+            <TextBlock Text="Ingredients" FontWeight="Bold" Margin="0 0 0 5"/>
+            <ListBox x:Name="IngredientsListBox" Margin="0 0 0 5"/>
+            <TextBlock Text="Steps" FontWeight="Bold" Margin="0 10 0 5"/>
+            <ListBox x:Name="StepsListBox" Margin="0">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox Content="{Binding}" Margin="5" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Button Content="Completed" Click="CompletedButton_Click" Margin="0 10"/>
+        </StackPanel>
+    </Grid>
+</Window>

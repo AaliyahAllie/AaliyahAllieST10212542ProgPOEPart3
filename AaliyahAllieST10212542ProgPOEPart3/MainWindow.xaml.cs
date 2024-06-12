@@ -102,5 +102,11 @@ namespace AaliyahAllieST10212542ProgPOEPart3
             SearchWindow searchWindow = new SearchWindow();
             searchWindow.Show();
         }
+
+        private void OpenViewRecipeWindow_Click(object sender, RoutedEventArgs e)
+        {
+            ViewRecipeWindow viewRecipeWindow = new ViewRecipeWindow();
+            viewRecipeWindow.Show();
+        }
     }
 }
