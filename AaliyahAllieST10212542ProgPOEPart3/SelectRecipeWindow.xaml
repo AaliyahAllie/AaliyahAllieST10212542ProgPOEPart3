@@ -8,7 +8,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Label Content="Select Recipe:" Margin="10"/>
+        <Label Content="Select Recipe To Display:" Margin="10"/>
         <ComboBox x:Name="RecipeComboBox" Grid.Row="1" Margin="10"/>
         <Button Content="Display" Grid.Row="2" Margin="10" Click="DisplayButton_Click"/>
     </Grid>
