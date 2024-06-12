@@ -43,6 +43,8 @@
             <ListBox Name="StepsListBox" Width="400" Height="100"/>
 
             <Button Content="Add Recipe" Click="AddRecipe_Click" Width="200"/>
+            
+
         </StackPanel>
     </Grid>
 </Window>

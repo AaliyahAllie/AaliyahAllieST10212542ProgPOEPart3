@@ -17,6 +17,6 @@
         <Button Height="30" Width="auto" Margin="23,458,1077,96" Click="ClearRecipe_Click">Clear Recipe</Button>
         <Button Height="30" Width="100" Margin="23,625,1077,29" Background="Red" Click="Exit_Button_Click">Exit</Button>
         <TextBox x:Name="RecipeOutputTextBox" Grid.Column="1" Margin="10" Height="550" Width="400" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"/>
-        <Button Height="30" Width="150" Margin="23,505,1077,19" Background="Green" Click="Filter_Click"  >Find Recipe By Filter</Button>
+        <Button Height="30" Width="150" Margin="23,505,1077,19" Background="Green" Click="OpenSearchWindow_Click"  >Search Recipe(Filter)</Button>
     </Grid>
 </Window>
