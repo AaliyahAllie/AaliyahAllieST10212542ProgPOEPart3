@@ -3,6 +3,9 @@
 https://github.com/AaliyahAllie/AaliyahAllieST10212542ProgPOEPart3.git
 
 **Table of Contents**
+ #how to run and compile#
+ 
+  #Lecturer Feedback#
 
   #Prerequisites#
   
@@ -22,6 +25,11 @@ https://github.com/AaliyahAllie/AaliyahAllieST10212542ProgPOEPart3.git
   
   #Notes
 
+*Lecturer Feedback*
+
+based on part 2 I didn't get any feedback as to what changes I need to make. so there are no updates to my file from part 2. I have however added two new features to my poe based on the rubric of part 3 (poe). I have added a feature where users can check their steps off for a selected recipe and complete the recipe. and I added a feature where they can do filtered searches and find recipes that contain a certain ingredient, in a food group and has a total calories based on what the user specifies. these are the only changes added to my poe from part 2 that are different as well as it changing from a console application to a wpf application.
+
+*How to Run and Compile*
 
 This is how to run/compile my prog poe (part 3)
 Initially if you are using Visual Studio 2022 if you have the project file open on your application you can press "F5" to run the project from the main window, or you can run it using the tab run with the little green triangle to run the main window. A more indepth approach would be to:
