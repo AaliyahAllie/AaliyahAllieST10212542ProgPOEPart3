@@ -5,19 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AaliyahAllieST10212542ProgPOEPart3"
         mc:Ignorable="d"
-        Title="Recipe App" Height="1000" Width="1200">
+        Title="Recipe App" Height="1000" Width="1200"
+        Background="CadetBlue">
+    <Window.Resources>
+        <!-- Style for rounded corner buttons -->
+        <Style x:Key="RoundedButton" TargetType="Button">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Label Content="All Recipes Display" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0"/>
-        <Button Height="30" Width="auto" Margin="23,67,1077,487" Click="Add_Recipe_Click">Add Recipe</Button>
-        <Button Height="30" Width="auto" Margin="23,143,1077,411" Click="DisplayAllRecipes_Click">Display All Recipes</Button>
-        <Button Height="30" Width="auto" Margin="23,210,1077,344" Click="DisplaySpecificRecipe_Click">Display Specific Recipe</Button>
-        <Button Height="30" Width="auto" Margin="23,277,1077,277" Click="Scale_Click">Scale Recipe</Button>
-        <Button Height="30" Width="auto" Margin="23,396,1077,158" Click="Reset_Click">Reset Recipe</Button>
-        <Button Height="30" Width="auto" Margin="23,334,1077,220" Click="ClearAll_Click">Clear All Recipes</Button>
-        <Button Height="30" Width="auto" Margin="23,458,1077,96" Click="ClearRecipe_Click">Clear Recipe</Button>
-        <Button Height="30" Width="100" Margin="23,625,1077,29" Background="Red" Click="Exit_Button_Click">Exit</Button>
+        <Button Style="{StaticResource RoundedButton}" Height="30" Width="auto" Margin="23,67,1077,487" Click="Add_Recipe_Click" Background="Blue">Add Recipe</Button>
+        <Button Style="{StaticResource RoundedButton}" Height="30" Width="auto" Margin="23,143,1077,411" Click="DisplayAllRecipes_Click" Background="Blue">Display All Recipes</Button>
+        <Button Style="{StaticResource RoundedButton}" Height="30" Width="auto" Margin="23,210,1077,344" Click="DisplaySpecificRecipe_Click" Background="Blue">Display Specific Recipe</Button>
+        <Button Style="{StaticResource RoundedButton}" Height="30" Width="auto" Margin="23,277,1077,277" Click="Scale_Click" Background="Blue">Scale Recipe</Button>
+        <Button Style="{StaticResource RoundedButton}" Height="30" Width="auto" Margin="23,396,1077,158" Click="Reset_Click" Background="Blue">Reset Recipe</Button>
+        <Button Style="{StaticResource RoundedButton}" Height="30" Width="auto" Margin="23,334,1077,220" Click="ClearAll_Click" Background="Blue">Clear All Recipes</Button>
+        <Button Style="{StaticResource RoundedButton}" Height="30" Width="auto" Margin="23,458,1077,96" Click="ClearRecipe_Click" Background="Blue">Clear Recipe</Button>
+        <Button Style="{StaticResource RoundedButton}" Height="30" Width="100" Margin="23,625,1077,29" Background="Red" Click="Exit_Button_Click">Exit</Button>
         <TextBox x:Name="RecipeOutputTextBox" Grid.Column="1" Margin="10" Height="550" Width="400" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"/>
-        <Button Height="30" Width="auto" Margin="23,143,1077,411" Click="OpenViewRecipeWindow_Click" Background="BlueViolet">View Recipe(Steps CheckList)(new feature)</Button>
-        <Button Height="30" Width="200" Margin="23,505,1077,19" Background="Green" Click="OpenSearchWindow_Click">Search Recipe(Filter)(new feature)</Button>
+        <Button Style="{StaticResource RoundedButton}" Height="30" Width="auto" Margin="23,143,1077,411" Click="OpenViewRecipeWindow_Click" Background="DarkCyan">View Recipe(Steps CheckList)(new feature)</Button>
+        <Button Style="{StaticResource RoundedButton}" Height="30" Width="200" Margin="23,505,1077,19" Background="DarkCyan" Click="OpenSearchWindow_Click">Search Recipe(Filter)(new feature)</Button>
     </Grid>
 </Window>

@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AaliyahAllieST10212542ProgPOEPart3"
         mc:Ignorable="d"
-        Title="IngredientFilterWindow" Height="200" Width="300">
+        Title="IngredientFilterWindow" Height="200" Width="300"
+        Background="CornflowerBlue">
     <Grid>
         <StackPanel Margin="20">
             <Label Content="Enter Ingredient:" FontWeight="Bold"/>

@@ -1,7 +1,8 @@
 ﻿<Window x:Class="AaliyahAllieST10212542ProgPOEPart3.ScaleWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Scale Recipe" Height="350" Width="350">
+        Title="Scale Recipe" Height="350" Width="350"
+        Background="CornflowerBlue">
     <Grid>
         <Label Content="Select Recipe to Scale:" Grid.Row="0" HorizontalAlignment="Center"/>
         <ComboBox x:Name="RecipeComboBox" Width="150" Height="30" VerticalAlignment="Top" Margin="50,30,50,0"/>

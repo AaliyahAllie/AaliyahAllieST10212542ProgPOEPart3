@@ -1,7 +1,9 @@
 ﻿<Window x:Class="AaliyahAllieST10212542ProgPOEPart3.ClearRecipeWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Clear Recipe" Height="150" Width="300">
+        Title="Clear Recipe" Height="150" Width="300"
+        Background="CornflowerBlue">
+        
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
