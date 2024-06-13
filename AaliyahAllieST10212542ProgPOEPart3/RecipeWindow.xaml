@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="RecipeWindow" Height="700" Width="800"
         Background="CornflowerBlue">
+    <!--This window will be used to capture the information of the recipe-->
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -23,22 +24,22 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-
+        <!--Text box that will capture recipe name-->
         <TextBlock Text="Recipe Name:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
         <TextBox Name="RecipeNameTextBox" Grid.Row="1" Grid.Column="0" Width="200" Margin="5"/>
-
+        <!--Text box to capture ingredient name-->
         <TextBlock Text="Ingredient Name:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
         <TextBox Name="IngredientNameTextBox" Grid.Row="3" Grid.Column="0" Width="200" Margin="5"/>
-
+        <!--Textbox to capptuer quantity of ingredient-->
         <TextBlock Text="Quantity:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
         <TextBox Name="QuantityTextBox" Grid.Row="5" Grid.Column="0" Width="200" Margin="5"/>
-
+        <!--Textbox to capture unit of measurement-->
         <TextBlock Text="Unit of Measurement:" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
         <TextBox Name="UnitTextBox" Grid.Row="7" Grid.Column="0" Width="200" Margin="5"/>
-
+        <!--Textbox to capture calories-->
         <TextBlock Text="Calories:" Grid.Row="8" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
         <TextBox Name="CaloriesTextBox" Grid.Row="9" Grid.Column="0" Width="200" Margin="5"/>
-
+        <!--Combo box for user to select a food group-->
         <TextBlock Text="Food Group:" Grid.Row="10" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
         <ComboBox Name="FoodGroupComboBox" Grid.Row="11" Grid.Column="0" Width="200" Margin="5">
             <ComboBoxItem Content="Starchy foods" Tag="1"/>
@@ -49,19 +50,23 @@
             <ComboBoxItem Content="Fats and oil" Tag="6"/>
             <ComboBoxItem Content="Water" Tag="7"/>
         </ComboBox>
-
+        <!--Add Ingredient button-->
+        <!--Adds ingredient to ingredient list-->
         <Button Content="Add Ingredient" Grid.Row="12" Grid.Column="0" Width="200" Background="DarkCyan" Margin="5" HorizontalAlignment="Left" Click="AddIngredient_Click"/>
-
+        <!--Captures different steps of the ingredient-->
         <TextBlock Text="Steps:" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Margin="5"/>
         <TextBox Name="StepTextBox" Grid.Row="1" Grid.Column="1" Width="200" Margin="5"/>
+        <!--Add Step Button-->
+        <!--Adds steps to step list-->
         <Button Content="Add Step" Grid.Row="2" Grid.Column="1" Width="200" Background="DarkCyan" Margin="5" HorizontalAlignment="Left" Click="AddStep_Click"/>
-
+        <!--Displays saved ingredients-->
         <TextBlock Text="Ingredients List:" Grid.Row="3" Grid.Column="1" VerticalAlignment="Top" Margin="5"/>
         <ListBox Name="IngredientsListBox" Grid.Row="4" Grid.Column="1" Width="400" Height="100" Margin="5"/>
-
+        <!--Displays saved steps-->
         <TextBlock Text="Steps List:" Grid.Row="5" Grid.Column="1" VerticalAlignment="Top" Margin="5"/>
         <ListBox Name="StepsListBox" Grid.Row="6" Grid.Column="1" Width="400" Height="100" Margin="5"/>
-
+        <!--Add Recipe Button-->
+        <!--Saves Recipe to program-->
         <Button Content="Add Recipe" Grid.Row="7" Grid.Column="1" Width="200" Background="DarkCyan" Margin="5" HorizontalAlignment="Left" Click="AddRecipe_Click"/>
     </Grid>
 </Window>
