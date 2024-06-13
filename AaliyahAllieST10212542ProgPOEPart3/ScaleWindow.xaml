@@ -3,14 +3,20 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Scale Recipe" Height="250" Width="350"
         Background="CornflowerBlue">
+    <!--Selects a recipe and scales it by a given factor-->
     <Grid>
+        <!--prompts user to select a recipe to scale-->
         <Label Content="Select Recipe to Scale:" Grid.Row="0" HorizontalAlignment="Center"/>
+        <!--recipe names displays in a drop down list-->
         <ComboBox x:Name="RecipeComboBox" Width="150" Height="30" VerticalAlignment="Top" Margin="50,30,50,0"/>
+        <!--Scale factors displayed in a drop down list-->
         <ComboBox x:Name="ScaleFactorComboBox" Width="50" Height="30" VerticalAlignment="Top" Margin="100,80,100,0">
             <ComboBoxItem Content="0.5" />
             <ComboBoxItem Content="2" />
             <ComboBoxItem Content="3" />
         </ComboBox>
+        <!--Scale Button-->
+        <!--Scales the recipe selected by the selected factor-->
         <Button Name="ScaleButton" Content="Scale" Width="100" Height="30" VerticalAlignment="Top" Margin="100,130,100,0" Click="Scale_Click" Background="DarkCyan"/>
     </Grid>
 </Window>
