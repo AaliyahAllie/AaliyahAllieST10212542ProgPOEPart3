@@ -3,14 +3,23 @@
 https://github.com/AaliyahAllie/AaliyahAllieST10212542ProgPOEPart3.git
 
 **Table of Contents**
-  #Prerequisites
+
+  #Prerequisites#
+  
   #Clone the Repository:
+  
   #Launch Visual Studio.
+  
   #Restore NuGet Packages:
+  
   #Set as Startup Project:
+  
   #Run the Application
+  
   #Interact with the Application
+  
   #Exit the Application
+  
   #Notes
 
 
