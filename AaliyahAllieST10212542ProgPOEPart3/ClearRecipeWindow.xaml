@@ -3,16 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Clear Recipe" Height="150" Width="300"
         Background="CornflowerBlue">
-        
+        <!--This xaml file contains the code for the ClearRecipeWindow, where users can select what recipe they want to delete-->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-
+        <!--Prompts the user to select a recipe to delete-->
         <Label Content="Select Recipe to Clear:" Grid.Row="0" HorizontalAlignment="Center"/>
+        <!--Combo box that will display the recipe names of the recipes that a user can select to delete-->
         <ComboBox x:Name="RecipeComboBox" Grid.Row="1" Margin="10" HorizontalAlignment="Center" Width="150"/>
+        <!--Clear Recipe Button-->
+        <!--When button is clicked recipe will be deleted from the collection-->
         <Button Content="Clear Recipe" Grid.Row="2" Margin="10" HorizontalAlignment="Center" Width="100" Click="ClearRecipeButton_Click" Background="DarkCyan"/>
     </Grid>
 </Window>
