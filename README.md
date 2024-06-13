@@ -2,6 +2,27 @@
 
 https://github.com/AaliyahAllie/AaliyahAllieST10212542ProgPOEPart3.git
 
+**Table of Contents**
+
+  #Prerequisites#
+  
+  #Clone the Repository:
+  
+  #Launch Visual Studio.
+  
+  #Restore NuGet Packages:
+  
+  #Set as Startup Project:
+  
+  #Run the Application
+  
+  #Interact with the Application
+  
+  #Exit the Application
+  
+  #Notes
+
+
 This is how to run/compile my prog poe (part 3)
 Initially if you are using Visual Studio 2022 if you have the project file open on your application you can press "F5" to run the project from the main window, or you can run it using the tab run with the little green triangle to run the main window. A more indepth approach would be to:
 
