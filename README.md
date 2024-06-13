@@ -4,9 +4,11 @@ https://github.com/AaliyahAllie/AaliyahAllieST10212542ProgPOEPart3.git
 
 **Table of Contents**
 
- #how to run and compile#
+ 
  
   #Lecturer Feedback#
+
+  #how to run and compile#
 
   #Prerequisites#
   
