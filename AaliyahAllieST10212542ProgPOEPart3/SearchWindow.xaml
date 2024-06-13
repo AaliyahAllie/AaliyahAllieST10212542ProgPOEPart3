@@ -3,6 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="SearchWindow" Height="450" Width="800"
         Background="CornflowerBlue">
+    <!--This code will search for recipes that match the criteria given in the search-->
+    <!--This is a new feature added to the program-->
     <Grid x:Name="SearchGrid">
         <!-- Search Ingredient -->
         <Label Content="Search Ingredient:" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
