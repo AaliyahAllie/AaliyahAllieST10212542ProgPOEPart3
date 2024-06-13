@@ -3,14 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Select Recipe" Height="170" Width="300"
         Background="CornflowerBlue">
+    <!--This will display a certain recipe that a user wishes to see-->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+        <!--Prompts user to select a recipe to display-->
         <Label Content="Select Recipe To Display:" Margin="10"/>
+        <!--Displats all the recipe names stored for user to select from-->
         <ComboBox x:Name="RecipeComboBox" Grid.Row="1" Margin="10"/>
+        <!--Display Button-->
+        <!--will display the recipe on display recipe window when clicked-->
         <Button Content="Display" Grid.Row="2" Margin="10" Click="DisplayButton_Click" Background="DarkCyan"/>
     </Grid>
 </Window>

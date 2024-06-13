@@ -1,7 +1,7 @@
 ﻿using AaliyahAllieST10212542ProgPOEPart3;
 using System.Collections.Generic;
 using System.Windows;
-
+//Will display a selected recipe on the display recipe window
 namespace AaliyahAllieST10212542ProgPOEPart3
 {
     public partial class SelectRecipeWindow : Window
