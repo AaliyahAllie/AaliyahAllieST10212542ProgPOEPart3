@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="Recipe App" Height="1000" Width="1200"
         Background="CadetBlue">
+    <!--this is the main window for the program and the first window that the users will interact with.
+    It works by use of button navigations that connects all the pages/windows to each other-->
     <Window.Resources>
         <!-- Style for rounded corner buttons -->
         <Style x:Key="RoundedButton" TargetType="Button">
@@ -26,17 +28,43 @@
         </Style>
     </Window.Resources>
     <Grid>
+        <!--tells user what the textbox is going to be used for-->
         <Label Content="All Recipes Display" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0"/>
+        <!--Add Recipe Button-->
+        <!--Redirects window to RecipeWindow where user can add mutliple Recipes-->
         <Button Style="{StaticResource RoundedButton}" Height="30" Width="auto" Margin="23,67,1077,487" Click="Add_Recipe_Click" Background="Blue">Add Recipe</Button>
+        <!--Display All Recipe Button-->
+        <!--When this button is clicked it will display all saved recipes on the textbox in the main window-->
         <Button Style="{StaticResource RoundedButton}" Height="30" Width="auto" Margin="23,143,1077,411" Click="DisplayAllRecipes_Click" Background="Blue">Display All Recipes</Button>
+        <!--Display Specific Recipe Button-->
+        <!--Displays only the recipe that a user wants to see on the DisplayRecipeWindow-->
         <Button Style="{StaticResource RoundedButton}" Height="30" Width="auto" Margin="23,210,1077,344" Click="DisplaySpecificRecipe_Click" Background="Blue">Display Specific Recipe</Button>
+        <!--Scale Button-->
+        <!--Allows a user to scale a selected recipe by a factor listed, redirects to the ScaleWindow and will display output on textbox in main window or displayrecipe winodw-->
         <Button Style="{StaticResource RoundedButton}" Height="30" Width="auto" Margin="23,277,1077,277" Click="Scale_Click" Background="Blue">Scale Recipe</Button>
+        <!--Reset Button-->
+        <!--Resets the values back to original values after scale was done to it, redirects to reset window and will display output on main window or display recipe window-->
         <Button Style="{StaticResource RoundedButton}" Height="30" Width="auto" Margin="23,396,1077,158" Click="Reset_Click" Background="Blue">Reset Recipe</Button>
+        <!--Clear ALL recipe window-->
+        <!--DELETES ALL RECIPES AND CLEARS RECIPE OUTPUT TEXT BOX ON MAIN WINDOW AND ALL LISTS WHERE RECIPE NAMES APPEAR-->
         <Button Style="{StaticResource RoundedButton}" Height="30" Width="auto" Margin="23,334,1077,220" Click="ClearAll_Click" Background="Blue">Clear All Recipes</Button>
+        <!--Clear recipe button-->
+        <!--Deletes a selected recipe from all lists and output boxes,redirects to ClearRecipeWindow-->
         <Button Style="{StaticResource RoundedButton}" Height="30" Width="auto" Margin="23,458,1077,96" Click="ClearRecipe_Click" Background="Blue">Clear Recipe</Button>
+        <!--Exit Button-->
+        <!--Closes the program when pressed-->
         <Button Style="{StaticResource RoundedButton}" Height="30" Width="100" Margin="23,625,1077,29" Background="Red" Click="Exit_Button_Click">Exit</Button>
+        <!--Output TextBox-->
+        <!--Displays all stored recipes when pressed-->
         <TextBox x:Name="RecipeOutputTextBox" Grid.Column="1" Margin="10" Height="550" Width="400" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"/>
+        <!--View Recipes Button-->
+        <!--New Feature-->
+        <!--Displays recipe and has a step list check box that users can check off as they complete a selected recipe-->
+        <!--Redirects to View Recipe Window-->
         <Button Style="{StaticResource RoundedButton}" Height="30" Width="auto" Margin="23,143,1077,480" Click="OpenViewRecipeWindow_Click" Background="DarkCyan">View Recipe(Steps CheckList)(new feature)</Button>
+        <!--Search Filter Button-->
+        <!--New Feature-->
+        <!--Searches recipe lists based on given inputs by user and displays all recipes that match redirects to Search Window-->
         <Button Style="{StaticResource RoundedButton}" Height="30" Width="200" Margin="23,505,1077,19" Background="DarkCyan" Click="OpenSearchWindow_Click">Search Recipe(Filter)(new feature)</Button>
     </Grid>
 </Window>
