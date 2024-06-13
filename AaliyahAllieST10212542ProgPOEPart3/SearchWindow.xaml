@@ -17,7 +17,7 @@
         <TextBox x:Name="MaxCaloriesTextBox" Width="200" Height="25" Margin="10,155,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
         <!-- Search Button -->
-        <Button Content="Search" Width="100" Height="25" Margin="10,190,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="SearchButton_Click"/>
+        <Button Content="Search" Width="100" Height="25" Margin="10,190,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="SearchButton_Click" Background="DarkCyan"/>
 
         <!-- Search Results -->
         <ListBox x:Name="SearchResultsListBox" Width="400" Height="200" Margin="10,230,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>

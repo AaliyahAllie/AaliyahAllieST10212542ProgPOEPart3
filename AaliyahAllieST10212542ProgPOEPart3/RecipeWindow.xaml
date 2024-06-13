@@ -31,11 +31,11 @@
                 <ComboBoxItem Content="Water" Tag="7"/>
             </ComboBox>
 
-            <Button Content="Add Ingredient" Click="AddIngredient_Click" Width="200"/>
+            <Button Content="Add Ingredient" Click="AddIngredient_Click" Width="200" Background="DarkCyan"/>
 
             <TextBlock Text="Steps:"/>
             <TextBox Name="StepTextBox" Width="200"/>
-            <Button Content="Add Step" Click="AddStep_Click" Width="200"/>
+            <Button Content="Add Step" Click="AddStep_Click" Width="200" Background="DarkCyan"/>
 
             <TextBlock Text="Ingredients List:"/>
             <ListBox Name="IngredientsListBox" Width="400" Height="100"/>
@@ -43,7 +43,7 @@
             <TextBlock Text="Steps List:"/>
             <ListBox Name="StepsListBox" Width="400" Height="100"/>
 
-            <Button Content="Add Recipe" Click="AddRecipe_Click" Width="200"/>
+            <Button Content="Add Recipe" Click="AddRecipe_Click" Width="200" Background="DarkCyan"/>
             
 
         </StackPanel>

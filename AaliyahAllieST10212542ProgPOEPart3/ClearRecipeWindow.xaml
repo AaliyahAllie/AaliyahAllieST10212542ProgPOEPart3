@@ -13,6 +13,6 @@
 
         <Label Content="Select Recipe to Clear:" Grid.Row="0" HorizontalAlignment="Center"/>
         <ComboBox x:Name="RecipeComboBox" Grid.Row="1" Margin="10" HorizontalAlignment="Center" Width="150"/>
-        <Button Content="Clear Recipe" Grid.Row="2" Margin="10" HorizontalAlignment="Center" Width="100" Click="ClearRecipeButton_Click"/>
+        <Button Content="Clear Recipe" Grid.Row="2" Margin="10" HorizontalAlignment="Center" Width="100" Click="ClearRecipeButton_Click" Background="DarkCyan"/>
     </Grid>
 </Window>

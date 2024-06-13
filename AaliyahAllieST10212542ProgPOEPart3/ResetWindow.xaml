@@ -6,6 +6,6 @@
     <Grid>
         <Label Content="Select Recipe to Reset:" Grid.Row="0" HorizontalAlignment="Center"/>
         <ComboBox x:Name="RecipeComboBox" Width="200" Height="30" VerticalAlignment="Top" Margin="50,30,50,0"/>
-        <Button Name="ResetButton" Content="Reset" Width="100" Height="30" VerticalAlignment="Top" Margin="100,80,100,0" Click="ResetButton_Click"/>
+        <Button Name="ResetButton" Content="Reset" Width="100" Height="30" VerticalAlignment="Top" Margin="100,80,100,0" Click="ResetButton_Click" Background="DarkCyan"/>
     </Grid>
 </Window>
