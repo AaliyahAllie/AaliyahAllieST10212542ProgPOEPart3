@@ -4,15 +4,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="View Recipe" SizeToContent="WidthAndHeight"
         Background="CornflowerBlue">
+    <!--Allows a user to check off steps for a selected recipe-->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
+        <!--Recipe Name options to select from-->
         <ComboBox x:Name="RecipeComboBox" Grid.Row="0" Margin="10" Width="200"
                   SelectionChanged="RecipeComboBox_SelectionChanged"/>
-
+        <!--Displays ingredients and steps, allows steps to be checked off-->
         <StackPanel Grid.Row="1" Margin="10">
             <TextBlock Text="Ingredients" FontWeight="Bold" Margin="0 0 0 5"/>
             <ListBox x:Name="IngredientsListBox" Margin="0 0 0 5"/>
@@ -24,6 +25,8 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
+            <!--Complete button-->
+            <!--Allows user to mark recipe as completed when all steps are done-->
             <Button Content="Completed" Click="CompletedButton_Click" Margin="0 10" Background="DarkCyan"/>
         </StackPanel>
     </Grid>
