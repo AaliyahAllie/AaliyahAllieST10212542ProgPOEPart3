@@ -2,7 +2,9 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Display Recipe" Height="300" Width="400">
+    <!--This is where SelectRecipeWindow will output the recipe that the user selects to see-->
     <Grid>
+        <!--this textbox is where the recipe details for the selected recipe on SelectRecipeWindow willl display-->
         <TextBox x:Name="RecipeDetailsTextBox" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/>
     </Grid>
 </Window>
